@@ -17,8 +17,8 @@ public class Inventory : MonoBehaviour
     }
     #endregion
 
-    [SerializeField] private int inventoryCapacity;
     public List<Item> items = new List<Item>();
+    [SerializeField] private int inventoryCapacity = 3;
     public delegate void OnItemChanged();
     public  OnItemChanged onItemChangedCallback;
 

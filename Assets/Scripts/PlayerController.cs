@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(PlayerInteractor))]
 public class PlayerController : MonoBehaviour
@@ -32,11 +31,6 @@ public class PlayerController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
-
         RaycastHit raycastHit;
         if (rightPointerClicked)
         {
