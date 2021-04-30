@@ -1,19 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    public event Action<InventorySlot> OnRightClickEvent;
+    public event Action<InventorySlot> OnDragEvent;
+    public event Action<InventorySlot> OnDropEvent;
+    public event Action<InventorySlot> OnBeginDragEvent;
+    public event Action<InventorySlot> OnEndDragEvent;
+
+    InventoryUI inventoryUI;
     #region Singleton
     public static Inventory inctance;
     private void Awake()
     {
         if (inctance != null)
         {
-            Debug.LogError("morethan one inventory");
+            Debug.LogError("more than one inventory");
             return;
         }
         inctance = this;
+
+        inventoryUI = GameObject.Find("Canvas").GetComponent<InventoryUI>();
     }
     #endregion
 
@@ -22,29 +32,54 @@ public class Inventory : MonoBehaviour
     public delegate void OnItemChanged();
     public  OnItemChanged onItemChangedCallback;
 
+
+
+    private void Start()
+    {
+        for (int i = 0; i < inventoryUI.slots.Length; i++)
+        {
+            inventoryUI.slots[i].OnRightClickEvent += OnRightClickEvent;
+            inventoryUI.slots[i].OnDragEvent += OnDragEvent;
+            inventoryUI.slots[i].OnDropEvent += OnDropEvent;
+            inventoryUI.slots[i].OnBeginDragEvent += OnBeginDragEvent;
+            inventoryUI.slots[i].OnEndDragEvent += OnEndDragEvent;
+}
+    }
     public bool Add(Item item)
     {
-        if (!item.isDefaultItem)
+        for (int i = 0; i < inventoryUI.slots.Length; i++)
         {
-            if (items.Count >= inventoryCapacity)
+            if (inventoryUI.slots[i].Item == null)
             {
-                Debug.Log("Not enough space");
-                return false;
-            }
-            items.Add(item);
-            if (onItemChangedCallback != null)
-                onItemChangedCallback.Invoke();
+                inventoryUI.slots[i].Item = item;
+                return true;
+            }  
         }
-        return true;
+        return false;
     }
 
-    public void Remove(Item item)
+    public bool Remove(Item item)
     {
-        if (!item.isDefaultItem)
+        for (int i = 0; i < inventoryUI.slots.Length; i++)
         {
-            items.Remove(item);
-            if (onItemChangedCallback != null)
-                onItemChangedCallback.Invoke();
+            if (inventoryUI.slots[i].Item == item)
+            {
+                inventoryUI.slots[i].Item = null;
+                return true;
+            }
         }
+        return false;
+    }
+
+    public bool IsFull()
+    {
+        for (int i = 0; i < inventoryUI.slots.Length; i++)
+        {
+            if (inventoryUI.slots[i].Item == null)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }

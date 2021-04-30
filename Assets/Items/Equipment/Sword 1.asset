@@ -9,10 +9,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d637dfae5e22ee43b0e3c79400198e3, type: 3}
-  m_Name: Sword
+  m_Script: {fileID: 11500000, guid: 06c8657ca9e37df4193d0c8632669072, type: 3}
+  m_Name: Sword 1
   m_EditorClassIdentifier: 
-  ID: 2
-  name: Sword
+  ID: 1
+  name: Sword of Thousend Truth
   icon: {fileID: 21300000, guid: 5fd50594014b70e48bd6993443d46b32, type: 3}
   isDefaultItem: 0
+  EquipmentType: 1
+  StrengthStat: 4
+  IntelligenceStat: 1
+  AgilityStat: 3
+  VitalityStat: 2
+  PercentStrengthStat: 0
+  PercentIntelligenceStat: 0
+  PercentAgilityStat: 0
+  PercentVitalityStat: 0

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7453c783e3c20704094e9498398c1cb8, type: 3}
+  m_Name: Jar of honey 1
+  m_EditorClassIdentifier: Assembly-CSharp::Consumable
+  ID: 1
+  name: Jar of honey
+  icon: {fileID: 21300000, guid: e52ea25af699fd445b7046374f81a5b9, type: 3}
+  isDefaultItem: 0
+  ConsumableType: 3
+  HPRegen: 0
+  MPRegen: 0
+  HPInstantRegen: 0
+  MPInstantRegen: 0
+  Duration: 0
+  VitalityStatBonus: 0
+  StrengthStatBonus: 0
+  IntelligenceStatBonus: 0
+  AgilityStatBonus: 0
+  PercentStrengthStatBonus: 0
+  PercentIntelligenceStatBonus: 0
+  PercentAgilityStatBonus: 0
+  PercentVitalityStatBonus: 0

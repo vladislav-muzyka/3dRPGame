@@ -16,7 +16,6 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler,IBeginDragHandler, ID
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("OnBeginDrag");
         canvasGroup.blocksRaycasts = false;
     }
 
@@ -33,7 +32,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler,IBeginDragHandler, ID
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("OnPointerDown");
+
     }
 
 }
