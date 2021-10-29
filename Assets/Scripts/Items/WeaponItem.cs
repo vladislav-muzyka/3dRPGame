@@ -6,9 +6,6 @@ using UnityEngine;
 public class WeaponItem : Item2
 {
 
-    [NaughtyAttributes.ShowAssetPreview]
-    [SerializeField] GameObject Mesh;
-
     [NaughtyAttributes.MinMaxSlider(0, 100)]
     [SerializeField] Vector2Int Damage;
 

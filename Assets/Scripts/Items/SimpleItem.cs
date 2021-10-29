@@ -5,9 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Item", menuName = "Items/Create Simple Item")]
 public class SimpleItem : Item2
 {
-    [NaughtyAttributes.ShowAssetPreview]
-    [SerializeField] GameObject Mesh;
-
     [SerializeField] SimpleItems ItemType;
 
     [SerializeField] AttributesInItem[] AddAtributes;
@@ -16,7 +13,4 @@ public class SimpleItem : Item2
     [SerializeField] bool TimeRegen;
     [NaughtyAttributes.ShowIf("TimeRegen")]
     [SerializeField] float Time;
-
-
-
 }

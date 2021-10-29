@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Item2 : ScriptableObject
+public class Item2 : ScriptableObject, IMeshItem
 {
     [NaughtyAttributes.ReadOnly]
     [SerializeField] string ID = "";
@@ -13,6 +13,13 @@ public class Item2 : ScriptableObject
     [NaughtyAttributes.ShowAssetPreview]
     [SerializeField] Sprite Icon;
 
+    [NaughtyAttributes.ShowAssetPreview]
+    [SerializeField] GameObject Mesh;
+
+    public GameObject GetItemMesh()
+    {
+        return Mesh;
+    }
 
 
 #if UNITY_EDITOR

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public struct AttributesInItem 
+public struct AttributesInItem
 {
     [SerializeField] Attributes Atribute;
     [SerializeField] int ValueOfAttribute;
@@ -13,9 +13,6 @@ public struct AttributesInItem
 [CreateAssetMenu(fileName = "New Armor", menuName = "Items/Create Armor")]
 public class ArmorItem : Item2
 {
-    [NaughtyAttributes.ShowAssetPreview]
-    [SerializeField] GameObject Mesh;
-
     [SerializeField] EquipmentType Type;
 
     [SerializeField] AttributesInItem[] AddAtributes; 
@@ -24,6 +21,4 @@ public class ArmorItem : Item2
     [SerializeField] Vector2Int Defence;
 
     [SerializeField] DamageTypes[] DefenceType;
-
-
 }
