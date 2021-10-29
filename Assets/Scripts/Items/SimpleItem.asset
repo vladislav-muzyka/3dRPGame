@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd314cc06ce058e49b1befe57ab349f8, type: 3}
-  m_Name: New Item 1
+  m_Name: SimpleItem
   m_EditorClassIdentifier: 
   ID: 6f9f15cbc983ad04191bddbb7524f4c2
   NameOfItem: Apple

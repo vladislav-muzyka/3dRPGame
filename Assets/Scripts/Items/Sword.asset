@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 964eea644ec4a714698333597f1bfaea, type: 3}
-  m_Name: New Weapon
+  m_Name: Sword
   m_EditorClassIdentifier: 
   ID: fd096704e309fc94dad184dea53784a2
   NameOfItem: SwordOfDeth
