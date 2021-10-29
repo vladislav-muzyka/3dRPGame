@@ -2,24 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public enum EquipmentType
-{
-    None,
-    LeftWeapon,
-    RightWeapon,
-    Shield,
-    Chest,
-    Helmet,
-    Boots,
-    Leggings,
-    Glowes,
-    Amoulet,
-    LeftRing,
-    RightRing,
-}
-
-
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/EquipibleItem")]
 public class EquipibleItem : Item
 {

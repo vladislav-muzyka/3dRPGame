@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour
         rightPointerClicked = Input.GetButton("Fire2");
         leftPointerClicked = Input.GetButton("Fire1");
     }
+
+
+    RaycastHit raycastHit;
     void FixedUpdate()
     {
         if (EventSystem.current.IsPointerOverGameObject())
@@ -37,7 +40,6 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        RaycastHit raycastHit;
         if (rightPointerClicked)
         {
             if (Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out raycastHit, 100))

@@ -8,17 +8,17 @@ public class InventoryUI : MonoBehaviour
     public InventorySlot[] slots;
     Inventory inventory;
     [SerializeField] GameObject inventoryUI;
-    void Start() 
+    void Start()
     {
         inventory = Inventory.inctance;
         inventory.onItemChangedCallback += UpdateUI;
-        
+
     }
 
     private void Awake()
     {
-        slots = itemParent.GetComponentsInChildren<InventorySlot>();
-        inventoryUI.SetActive(!inventoryUI.activeSelf); 
+        //slots = itemParent.GetComponentsInChildren<InventorySlot>();
+        inventoryUI.SetActive(!inventoryUI.activeSelf);
     }
 
 
@@ -42,7 +42,8 @@ public class InventoryUI : MonoBehaviour
     {
         if (Input.GetButtonDown("Inventory"))
         {
-            inventoryUI.SetActive(!inventoryUI.activeSelf); 
+            inventoryUI.SetActive(!inventoryUI.activeSelf);
         }
     }
+
 }

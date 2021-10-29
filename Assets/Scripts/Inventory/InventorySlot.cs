@@ -6,7 +6,8 @@ using System;
 public class InventorySlot : MonoBehaviour, IDropHandler, IPointerClickHandler, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     [SerializeField] Image icon;
-    [SerializeField] Sprite defaultSprite;
+    [SerializeField] Sprite defaultSprite; 
+
     private Color normalColor = Color.white;
     private Color disabledColor = new Color(1, 1, 1, 0);
     private Color defaultEquipmentColor = new Color(1, 1, 1, 0.3921569f);
